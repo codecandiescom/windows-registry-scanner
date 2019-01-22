@@ -1,0 +1,22 @@
+# Scanner Configuration file
+dbuser=mysqlusername
+dbpass=mysqlpassword
+dbserver=ip.of.the.server
+dbtable=thedatabasename
+#
+# keys
+# A '*' before the key path means that the key and subkeys have to be
+# scanned. No '*' means that only the first key/value will be recovered.
+#
+# Keys used to scan the computername, processor, disks and video
+key=SOFTWARE\Microsoft\Windows NT\CurrentVersion
+key=HARDWARE\DESCRIPTION\System\CentralProcessor\0
+key=*HARDWARE\DEVICEMAP\Scsi
+key=*HARDWARE\DEVICEMAP\VIDEO
+#
+# Key used to scan the software
+#
+key=*SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+#
+# Other keys
+#
